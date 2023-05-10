@@ -1,0 +1,144 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Ronda n</h2>
+        </div>
+    </div>
+    <!--IMPORTANTE: conseguir que el indicador de jugador siempre esté posicionado a la izquierda, que no sea responsive
+    con las cartas-->
+    <!--Esto corresponde a un jugador. En realidad, esto se repetirá por cada jugador que haya-->
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col text-left">
+                    <p>[Banca]</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-left">
+                    <h3>Nombre jugador</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-left">
+                    <h4>Dinero</h4>
+                    <input type="text" disabled>
+                </div>
+            </div>
+        </div>
+        <!--A partir de aquí, tantas columnas como cartas tenga el jugador-->
+        <div class="col-9">
+            <div class="row">
+                <div class="col">
+                    <h1>carta</h1>
+                </div>
+                <div class="col">
+                    <h1>carta</h1>
+                </div>
+                <div class="col">
+                    <h1>carta</h1>
+                </div>    
+            </div>
+        </div>
+        
+    </div>
+    <!-------------------->
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col text-left">
+                    <p>[Banca]</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-left">
+                    <h3>Nombre jugador</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-left">
+                    <h4>Dinero</h4>
+                    <input type="text" disabled>
+                </div>
+            </div>
+        </div>
+        <!--A partir de aquí, tantas columnas como cartas tenga el jugador-->
+        <div class="col-9">
+            <div class="row">
+                <div class="col">
+                    <h1>carta</h1>
+                </div>
+                <div class="col">
+                    <h1>carta</h1>
+                </div>
+                     
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col text-left">
+                    <p>[Banca]</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-left">
+                    <h3>Nombre jugador</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-left">
+                    <h4>Dinero</h4>
+                    <input type="text" disabled>
+                </div>
+            </div>
+        </div>
+        <!--A partir de aquí, tantas columnas como cartas tenga el jugador-->
+        <div class="col-9">
+            <div class="row">
+                <div class="col">
+                    <h1>carta</h1>
+                </div>
+                <div class="col">
+                    <h1>carta</h1>
+                </div>
+                <div class="col">
+                    <h1>carta</h1>
+                </div>         
+                <div class="col">
+                    <h1>carta</h1>
+                </div>   
+                <div class="col">
+                    <h1>carta</h1>
+                </div>   
+            </div>
+        </div>
+        
+    </div>
+    <!--A partir de aquí pueden aparecer distintos componentes según el estado del juego:-->
+    <!--Durante una ronda:-->
+    <div class="row">
+        <div class="col">
+            <h4>Bote</h4>
+            <input type="text" disabled>
+        </div>
+        <div class="col">
+            <h4>Apuesta</h4>
+            <input type="text">
+            <!--br provisional-->
+            <br>
+            <button>Pedir carta</button>
+        </div>
+    </div>
+    <!--Al acabar una ronda:-->
+    <div class="row">
+        <div class="col">
+            <button>Terminar partida</button>
+        </div>
+        <div class="col">
+            <button>Siguiente ronda</button>
+        </div>
+    </div>
+</div>
