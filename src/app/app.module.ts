@@ -3,20 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InicioComponent } from './inicio-elegir/inicio-elegir.component';
+import { InicioElegirComponent } from './inicio-elegir/inicio-elegir.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { ResultadosComponent } from './resultados/resultados.component';
 import { InicioJugarComponent } from './inicio-jugar/inicio-jugar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { JugadorComponent } from './jugador/jugador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
+    InicioElegirComponent,
     RegistrarComponent,
     ResultadosComponent,
     InicioJugarComponent,
-    NavBarComponent
+    NavBarComponent,
+    JugadorComponent
   ],
   imports: [
     BrowserModule,

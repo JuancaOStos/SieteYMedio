@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-3">
+        <div class="row">
+            <div class="col text-left">
+                <h3>{{nombre}} {{esBanca}}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-left">
+                <h4>{{dinero}}€</h4>
+                <input type="text" disabled>
+            </div>
+        </div>
+    </div>
+    <!--A partir de aquí, tantas columnas como cartas tenga el jugador-->
+    <div class="col-9">
+        <div *ngFor="let carta of mano">
+            <img [src]="carta.img" [alt]="carta.img" class="img-fluid">
+        </div>
+    </div>
+    
+</div>
