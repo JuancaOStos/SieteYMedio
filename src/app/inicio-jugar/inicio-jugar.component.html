@@ -7,9 +7,17 @@
     <!--IMPORTANTE: conseguir que el indicador de jugador siempre esté posicionado a la izquierda, que no sea responsive
     con las cartas-->
     <!--Esto corresponde a un jugador. En realidad, esto se repetirá por cada jugador que haya-->
-    <div *ngFor="let jugador of jugadores">
-        <app-jugador [cartaRecibida]="cartaSacada" [nombre]="jugador.nombre" [dinero]="jugador.dinero" [banca]="jugador.banca"></app-jugador>
+    <div class="row">
+        <div class="col" *ngFor="let jugador of jugadores">
+            <app-jugador [cartaRecibida]="cartaSacada" [nombre]="jugador.nombre" [dinero]="jugador.dinero" [banca]="jugador.banca"></app-jugador>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-2" *ngFor="let carta of cartasMesa">
+            <img [src]="carta.img" alt="carta.img" class="img-fluid">
+        </div>
+    </div>
+    
     <!-------------------->
     
     <!--A partir de aquí pueden aparecer distintos componentes según el estado del juego:-->

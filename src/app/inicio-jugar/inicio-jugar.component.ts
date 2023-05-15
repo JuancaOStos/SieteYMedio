@@ -11,6 +11,7 @@ import { Jugador } from '../jugador';
 })
 export class InicioJugarComponent {
   baraja: Carta[] = [];
+  cartasMesa: Carta[] = [];
   cartaSacada?: Carta;
   nRonda: number = 1;
   turnosTerminados: number = 0;
@@ -21,21 +22,24 @@ export class InicioJugarComponent {
       dinero: 20,
       suma: 5,
       turnoTerminado: false,
-      banca: true
+      banca: true,
+      mano: []
     },
     {
       nombre: "Gisela",
       dinero: 40,
       suma: 5,
       turnoTerminado: false,
-      banca: false
+      banca: false,
+      mano: []
     },
     {
       nombre: "Aida",
       dinero: 30,
       suma: 5,
       turnoTerminado: false,
-      banca: false
+      banca: false,
+      mano: []
     }
   ];
 
@@ -48,6 +52,7 @@ export class InicioJugarComponent {
 
   SacarCarta(): void {
     this.cartaSacada = this.baraja.pop();
+    if (this.cartaSacada) this.cartasMesa.push(this.cartaSacada);
     //console.log(this.baraja);
     console.log(this.cartaSacada);
   }
@@ -59,5 +64,10 @@ export class InicioJugarComponent {
 
   ngOnInit(): void {
     this.CrearBaraja();
+  }
+
+  EmpezarRonda(jugadores: Jugador): void {
+    this.nRonda++;
+    
   }
 }

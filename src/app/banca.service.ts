@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Carta } from './carta';
+import { Jugador } from './jugador';
 
 @Injectable({
   providedIn: 'root'
@@ -43,5 +44,9 @@ export class BancaService {
       cartasOrdenadas.splice(indiceAleatorio, 1);
     }
     return cartasBarajadas;
+  }
+
+  EmpezarRonda(jugadores: Jugador[]): void {
+    
   }
 }

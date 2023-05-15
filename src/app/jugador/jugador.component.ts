@@ -7,12 +7,13 @@ import { Carta } from '../carta';
   styleUrls: ['./jugador.component.css']
 })
 export class JugadorComponent {
-  mano: Carta[] = [];
+  
 
   @Input() cartaRecibida?: Carta;
   @Input() nombre?: string;
   @Input() dinero?: number;
   @Input() banca?: boolean;
+  @Input() mano: Carta[] = [];
   esBanca?: string;
 
   ngOnChanges(): void {
