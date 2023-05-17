@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConnService } from '../conn.service';
 
 @Component({
   selector: 'app-registrar',

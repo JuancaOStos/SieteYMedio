@@ -32,8 +32,9 @@ export class BancaService {
         let nuevaCarta: Carta = {
           palo: nuevoPalo,
           numero: j.toString(),
-          valor: j < 7 ? j : 0.5,
-          img: "assets/images/" + nuevoPalo + j.toString() +".png"
+          valor: j <= 7 ? j : 0.5,
+          img: "assets/images/" + nuevoPalo + j.toString() +".png",
+          bocaArriba: true
         };
         cartasOrdenadas.push(nuevaCarta);
       }
@@ -44,9 +45,5 @@ export class BancaService {
       cartasOrdenadas.splice(indiceAleatorio, 1);
     }
     return cartasBarajadas;
-  }
-
-  EmpezarRonda(jugadores: Jugador[]): void {
-    
   }
 }

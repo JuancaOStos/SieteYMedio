@@ -8,41 +8,29 @@
       <div class="row">
         <div class="col">
           <h4>Jugador 1</h4>
-          <select name="j1" id="1">
+          <select (change)="onSeleccionarJugador1($event)" name="j1" id="1">
             <option value="1">Selecciona jugador</option>
-            <option value="1">Jugador 1</option>
-            <option value="2">Jugador 2</option>
-            <option value="3">Jugador 3</option>
+            <option *ngFor="let jugador of jugadores" [hidden]="jugador === jugadorSeleccionado2 || jugador === jugadorSeleccionado3" [value]="jugador">{{jugador}}</option>
           </select>
         </div>
         <div class="col">
           <h4>Jugador 2</h4>
-          <select name="j1" id="1">
+          <select (change)="onSeleccionarJugador2($event)" name="j2" id="2">
             <option value="1">Selecciona jugador</option>
-            <option value="1">Jugador 1</option>
-            <option value="2">Jugador 2</option>
-            <option value="3">Jugador 3</option>
+            <option *ngFor="let jugador of jugadores" [hidden]="jugador === jugadorSeleccionado1 || jugador === jugadorSeleccionado3" [value]="jugador">{{jugador}}</option>
           </select>
         </div>
         <div class="col">
           <h4>Jugador 3</h4>
-          <select name="j1" id="1">
+          <select (change)="onSeleccionarJugador3($event)" name="j3" id="3">
             <option value="1">Selecciona jugador</option>
-            <option value="1">Jugador 1</option>
-            <option value="2">Jugador 2</option>
-            <option value="3">Jugador 3</option>
+            <option *ngFor="let jugador of jugadores" [hidden]="jugador === jugadorSeleccionado1 || jugador === jugadorSeleccionado2" [value]="jugador">{{jugador}}</option>
           </select>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <h3>Dinero inicial</h3>
-            <input type="text" placeholder="Cantidad">
-        </div>        
-    </div>
-    <div class="row">
-        <div class="col">
-            <button type="button" routerLink="/inicio-jugar">¡Empezar!</button>
+          <button type="button" routerLink="/inicio-jugar" [hidden]="!(jugadorSeleccionado1 && jugadorSeleccionado2 && jugadorSeleccionado3)" (click)="empezarPartida()">¡Empezar!</button>
         </div>
     </div>
 </div>

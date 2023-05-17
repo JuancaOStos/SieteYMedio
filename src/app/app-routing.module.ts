@@ -6,6 +6,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
 import { InicioJugarComponent } from './inicio-jugar/inicio-jugar.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'registrar', pathMatch: 'full'},
   { path: 'inicio-elegir', component: InicioElegirComponent },
   { path: 'inicio-jugar', component: InicioJugarComponent },
   { path: 'registrar', component: RegistrarComponent },

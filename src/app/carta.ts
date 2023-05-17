@@ -3,4 +3,5 @@ export interface Carta {
     numero: string;
     valor: number;
     img: string;
+    bocaArriba: boolean;
 }
