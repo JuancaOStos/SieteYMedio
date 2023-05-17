@@ -2,7 +2,6 @@
     <div class="row">
         <div class="col">
           <h3>¡Elige jugadores!</h3>
-          <!--Futuro get-->
         </div>
       </div>
       <div class="row">
@@ -30,7 +29,7 @@
     </div>
     <div class="row">
         <div class="col">
-          <button type="button" routerLink="/inicio-jugar" [hidden]="!(jugadorSeleccionado1 && jugadorSeleccionado2 && jugadorSeleccionado3)" (click)="empezarPartida()">¡Empezar!</button>
+          <button type="button" class="btn btn-primary" routerLink="/inicio-jugar" [hidden]="!(jugadorSeleccionado1 && jugadorSeleccionado2 && jugadorSeleccionado3)" (click)="empezarPartida()">¡Empezar!</button>
         </div>
     </div>
 </div>

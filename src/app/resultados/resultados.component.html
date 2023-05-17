@@ -6,7 +6,6 @@
     </div>
     <div class="row">
         <div class="col">
-            <!--Futuro get-->
             <table class="table">
                 <thead>
                   <tr>
@@ -18,26 +17,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>@mdo</td>
+                  <tr *ngFor="let partida of partidas">
+                    <th scope="row">{{partida.id}}</th>
+                    <td>{{partida.jugador1}}</td>
+                    <td>{{partida.jugador2}}</td>
+                    <td>{{partida.jugador3}}</td>
+                    <td>{{partida.ganador}}</td>
                   </tr>
                 </tbody>
               </table>

@@ -11,19 +11,13 @@ export class JugadorComponent {
 
   @Input() cartaRecibida?: Carta;
   @Input() nombre?: string;
-  @Input() dinero?: number;
   @Input() banca?: boolean;
   @Input() suma?: string;
-  //@Input() mano: Carta[] = [];
   esBanca?: string;
 
   patata?: string;
 
   ngOnChanges(): void {
-    /*
-    if (this.cartaRecibida) this.mano.push(this.cartaRecibida);
-    console.log(this.mano);
-    */
     this.esBanca = this.banca ? "(Banca)" : "";
   }
 }

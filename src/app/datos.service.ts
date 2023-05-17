@@ -4,17 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DatosService {
-  jugadoresSeleccionados?: string[];
+  jugadoresSeleccionados?: any
 
   constructor() { }
 
-  setJugadores(jugadoresSeleccionados: string[]): void {
+  setJugadores(jugadoresSeleccionados: any[]): void {
     this.jugadoresSeleccionados = jugadoresSeleccionados;
+    console.log("En setJugadores");
     console.log(this.jugadoresSeleccionados);
   }
 
-  getJugadores(): string[]{
+  getJugadores(): any[]{
     if (this.jugadoresSeleccionados) return this.jugadoresSeleccionados;
     else return [];
   }
+
+  
 }

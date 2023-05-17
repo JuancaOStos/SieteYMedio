@@ -6,16 +6,7 @@
 </div>
 <div class="row">
     <div class="col text-left">
-        <!--<h4>{{dinero}}€</h4>-->
         <h4 *ngIf="suma != null && suma != '-1'">Suma: {{suma}}</h4>
         <h4 *ngIf="suma != null && suma == '-1'">PIERDE</h4>
     </div>
 </div>
-<!--A partir de aquí, tantas columnas como cartas tenga el jugador-->
-<!--
-<div class="col-9">
-<div *ngFor="let carta of mano">
-    <img [src]="carta.img" [alt]="carta.img" class="img-fluid">
-</div>
-</div>
--->

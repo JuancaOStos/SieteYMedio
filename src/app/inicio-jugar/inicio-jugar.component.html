@@ -1,16 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col">
-            <h3>Ronda {{nRonda}}</h3>
-        </div>
-    </div>
-    <!--IMPORTANTE: conseguir que el indicador de jugador siempre esté posicionado a la izquierda, que no sea responsive
-    con las cartas-->
-    <!--Esto corresponde a un jugador. En realidad, esto se repetirá por cada jugador que haya-->
-    <div class="row">
         <div class="col" *ngFor="let jugador of jugadores">
             <app-jugador [nombre]="jugador.nombre" [banca]="jugador.banca" [suma]="jugador.suma.toString()"></app-jugador>
-            <!--[dinero]="jugador.dinero"-->
         </div>
     </div>
     <div class="row">
@@ -19,21 +10,15 @@
             <img *ngIf="carta.bocaArriba" (click)="CambiarOrientacion(carta)" (mouseleave)="onMouseLeave(carta)" [src]="carta.img" alt="carta.img" class="img-fluid">
         </div>
     </div>
-    
-    <!-------------------->
-    
-    <!--A partir de aquí pueden aparecer distintos componentes según el estado del juego:-->
-    <!--Durante los turnos:-->
     <div class="row">
         <div class="col">
-            <button (click)="SiguienteTurno()" [disabled]="jugadores[0].turnoTerminado && jugadores[1].turnoTerminado && jugadores[2].turnoTerminado">{{textoTurno}}</button>
-            <button (click)="SacarCarta()" [disabled]="sumaMesa == -1 || jugadores[0].turnoTerminado && jugadores[1].turnoTerminado && jugadores[2].turnoTerminado">Pedir carta</button>
+            <button type="button" class="btn btn-primary" (click)="SiguienteTurno()" [disabled]="jugadores[0].turnoTerminado && jugadores[1].turnoTerminado && jugadores[2].turnoTerminado">{{textoTurno}}</button>
+            <button type="button" class="btn btn-primary" (click)="SacarCarta()" [disabled]="sumaMesa == -1 || jugadores[0].turnoTerminado && jugadores[1].turnoTerminado && jugadores[2].turnoTerminado">Pedir carta</button>
         </div>
     </div>
-    <!--Al acabar los turnos:-->
     <div class="row">
         <div class="col">
-            <button routerLink="/resultados" (click)="VerResultados()" *ngIf="jugadores[0].turnoTerminado && jugadores[1].turnoTerminado && jugadores[2].turnoTerminado">Ver resultados</button>
+            <button type="button" class="btn btn-success" routerLink="/resultados" (click)="VerResultados()" *ngIf="jugadores[0].turnoTerminado && jugadores[1].turnoTerminado && jugadores[2].turnoTerminado">Ver resultados</button>
         </div>
     </div>
 </div>

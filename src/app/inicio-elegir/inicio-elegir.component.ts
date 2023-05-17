@@ -8,13 +8,23 @@ import { ConnService } from '../conn.service';
   styleUrls: ['./inicio-elegir.component.css']
 })
 export class InicioElegirComponent {
-  // valores de jugadores de prueba
-  jugadores: string[] = ["Juan Carlos","Álvaro","Aida","Gisela","Cristian","Marina","Jomaru"];
+  jugadores: string[] = [];
   jugadorSeleccionado1?: string;
   jugadorSeleccionado2?: string;
   jugadorSeleccionado3?: string;
   jugadoresSeleccionados: string[] = [];
-  constructor(private datos: DatosService) {}
+
+  constructor(private datos: DatosService, private conn: ConnService) {}
+
+  ngOnInit(): void{
+    this.conn.getJugadores();this.conn.jugadores;
+    for (var i = 0; i < this.conn.jugadores.length; i++){
+      this.jugadores.push(this.conn.jugadores[i].nombre);
+    }
+    console.log("Esto");
+    console.log(this.jugadores);
+    console.log("Lo otro");
+  }
 
   onSeleccionarJugador1(event: any){
     const seleccion = event.target.value;
